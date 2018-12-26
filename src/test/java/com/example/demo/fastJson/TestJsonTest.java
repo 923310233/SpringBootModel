@@ -2,6 +2,7 @@ package com.example.demo.fastJson;
 
 import org.junit.Test;
 
+import java.util.LinkedHashMap;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
@@ -31,6 +32,20 @@ public class TestJsonTest {
 
         return;
 
+    }
+
+    @Test
+    public void testLinkedMap(){
+        LinkedHashMap<Integer,Integer>map = new LinkedHashMap<>(100);
+        for(int i = 0 ;i<50 ;i++){
+            map.put(i,i);
+        }
+
+
+        for(int j =0;j<400;j++){
+            map.remove(j);
+        }
+        return;
     }
 
 }
